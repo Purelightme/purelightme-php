@@ -1,0 +1,24 @@
+version: '3'
+
+networks:
+  web-network:
+
+services:
+  fpm:
+    build:
+      context: ./fpm
+    volumes:
+      - ./nginx/apps:/var/www/html
+    networks:
+      - web-network
+
+  nginx:
+      image: nginx:latest
+      ports:
+        - '80:80'
+      volumes:
+        - ./nginx/apps:/var/www/html
+        - ./nginx/conf:/etc/nginx/conf.d
+        - ./nginx/log:/var/log/nginx
+      networks:
+        - web-network
