@@ -1,3 +1,4 @@
 .idea
 .env
 cli/apps/
+mysql/data
