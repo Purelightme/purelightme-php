@@ -1,0 +1,25 @@
+2020/06/27 15:17:15 [error] 8#8: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: could not find driver in /var/www/html/purelight/index.php:3
+Stack trace:
+#0 /var/www/html/purelight/index.php(3): PDO->__construct('mysql:host=mysq...', 'root', 'root')
+#1 {main}
+  thrown in /var/www/html/purelight/index.php on line 3" while reading response header from upstream, client: 172.22.0.1, server: purelight.me, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://172.22.0.4:9000", host: "purelight.me"
+2020/06/27 15:17:18 [error] 8#8: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: could not find driver in /var/www/html/purelight/index.php:3
+Stack trace:
+#0 /var/www/html/purelight/index.php(3): PDO->__construct('mysql:host=mysq...', 'root', 'root')
+#1 {main}
+  thrown in /var/www/html/purelight/index.php on line 3" while reading response header from upstream, client: 172.22.0.1, server: purelight.me, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://172.22.0.4:9000", host: "purelight.me"
+2020/06/28 00:52:10 [error] 6#6: *11 open() "/var/www/html/purelight/api/backend/store/sub_orders" failed (2: No such file or directory), client: 172.23.0.1, server: purelight.me, request: "GET /api/backend/store/sub_orders HTTP/1.1", host: "dev.daishu-component.com"
+2020/06/28 01:52:45 [error] 6#6: *14 open() "/var/www/html/purelight/favicon.ico" failed (2: No such file or directory), client: 172.23.0.1, server: purelight.me, request: "GET /favicon.ico HTTP/1.1", host: "purelight.me", referrer: "http://purelight.me/index.php"
+2020/06/28 08:49:47 [error] 6#6: *18 open() "/var/www/html/purelight/robots.txt" failed (2: No such file or directory), client: 172.23.0.1, server: purelight.me, request: "GET /robots.txt HTTP/1.1", host: "127.0.0.1"
+2020/06/28 08:54:09 [error] 6#6: *20 open() "/var/www/html/purelight/robots.txt" failed (2: No such file or directory), client: 172.23.0.1, server: purelight.me, request: "GET /robots.txt HTTP/1.1", host: "purelight.me"
+2020/06/28 09:58:24 [error] 7#7: *18 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 172.24.0.1, server: purelight.me, request: "GET /index.php HTTP/1.1", upstream: "fastcgi://172.24.0.6:9000", host: "purelight.me"
+2020/06/28 09:58:24 [error] 7#7: *33 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 172.24.0.1, server: purelight.me, request: "GET /index.php HTTP/1.0", upstream: "fastcgi://172.24.0.7:9000", host: "host.docker.internal"
+2020/06/28 09:58:24 [error] 7#7: *33 no live upstreams while connecting to upstream, client: 172.24.0.1, server: purelight.me, request: "GET /index.php HTTP/1.0", upstream: "fastcgi://fpm", host: "host.docker.internal"
+2020/06/28 09:58:24 [error] 7#7: *35 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 172.24.0.1, server: purelight.me, request: "GET /index.php HTTP/1.0", upstream: "fastcgi://172.24.0.6:9000", host: "host.docker.internal"
+2020/06/28 09:58:24 [error] 7#7: *35 no live upstreams while connecting to upstream, client: 172.24.0.1, server: purelight.me, request: "GET /index.php HTTP/1.0", upstream: "fastcgi://fpm", host: "host.docker.internal"
+2020/06/28 09:58:24 [error] 7#7: *37 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 172.24.0.1, server: purelight.me, request: "GET /index.php HTTP/1.0", upstream: "fastcgi://172.24.0.7:9000", host: "host.docker.internal"
+2020/06/28 09:58:24 [error] 7#7: *37 no live upstreams while connecting to upstream, client: 172.24.0.1, server: purelight.me, request: "GET /index.php HTTP/1.0", upstream: "fastcgi://fpm", host: "host.docker.internal"
+2020/06/28 09:58:24 [error] 7#7: *39 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 172.24.0.1, server: purelight.me, request: "GET /index.php HTTP/1.0", upstream: "fastcgi://172.24.0.6:9000", host: "host.docker.internal"
+2020/06/28 09:58:24 [error] 7#7: *39 no live upstreams while connecting to upstream, client: 172.24.0.1, server: purelight.me, request: "GET /index.php HTTP/1.0", upstream: "fastcgi://fpm", host: "host.docker.internal"
+2020/06/28 09:58:24 [error] 7#7: *54 no live upstreams while connecting to upstream, client: 172.24.0.1, server: purelight.me, request: "GET /index.php HTTP/1.0", upstream: "fastcgi://fpm", host: "host.docker.internal"
+2020/06/28 09:58:24 [error] 7#7: *55 no live upstreams while connecting to upstream, client: 172.24.0.1, server: purelight.me, request: "GET /index.php HTTP/1.0", upstream: "fastcgi://fpm", host: "host.docker.internal"

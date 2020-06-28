@@ -12,13 +12,49 @@ services:
     networks:
       - web-network
 
+  cli:
+    build:
+      context: ./cli
+    volumes:
+      - ./cli/apps/hyperf-skeleton:/apps
+    tty: true
+    ports:
+      - '9501:9501'
+    networks:
+      - web-network
+
   nginx:
-      image: nginx:latest
+    image: nginx:latest
+    ports:
+      - '80:80'
+    volumes:
+      - ./nginx/apps:/var/www/html
+      - ./nginx/conf:/etc/nginx/conf.d
+      - ./nginx/log:/var/log/nginx
+    networks:
+      - web-network
+
+  mysql:
+      command:
+        --lower_case_table_names=1
+        --character-set-server=utf8mb4
+        --collation-server=utf8mb4_general_ci
+        --explicit_defaults_for_timestamp=true
+      image: mysql
+      environment:
+        TZ: Asia/Shanghai
+        MYSQL_ROOT_PASSWORD: root
       ports:
-        - '80:80'
+        - '3306:3306'
       volumes:
-        - ./nginx/apps:/var/www/html
-        - ./nginx/conf:/etc/nginx/conf.d
-        - ./nginx/log:/var/log/nginx
+        - ./mysql/data:/var/lib/mysql
       networks:
         - web-network
+
+  redis:
+    build:
+      context: ./redis
+    ports:
+      - '6379:6379'
+    networks:
+      - web-network
